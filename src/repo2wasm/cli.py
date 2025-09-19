@@ -1,8 +1,6 @@
 import logging
 
 logger = logging.getLogger(__name__)
-logging.basicConfig(encoding="utf-8", level=logging.INFO)
-
 
 def cli():
     import argparse
@@ -28,18 +26,25 @@ def cli():
         help="The directory to write the files.",
     )
 
-    parser.add_argument(
-        "--version",
-        action="store_true",
-        help="Print the version and exit.",
+    logging_level = parser.add_mutually_exclusive_group()
+    logging_level.add_argument(
+        "--info",
+        action='store_true',
+        help="Increase logging to info level.",
+    )
+    logging_level.add_argument(
+        "--debug",
+        action='store_true',
+        help="Increase logging to debug level.",
     )
 
     parser.add_argument(
-        "repository",
-        nargs="?",
-        default=".",
-        help="Git repository to build. Default to current directory.",
+        "--version",
+        action='store_true',
+        help="Print the version and exit.",
     )
+
+    parser.add_argument("repository", nargs='?', default=".", help="Git repository to build. Default to current directory.")
 
     args = parser.parse_args()
 
@@ -48,5 +53,14 @@ def cli():
 
         print(__version__)
         exit()
+
+    if args.info:
+        selected_logging_level = logging.INFO
+    elif args.debug:
+        selected_logging_level = logging.DEBUG
+    else:
+        selected_logging_level = logging.WARNING
+    
+    logging.basicConfig(encoding='utf-8', level=selected_logging_level)
 
     repo2wasm(args.repository, ide=args.ide, output_dir=args.output_dir)
