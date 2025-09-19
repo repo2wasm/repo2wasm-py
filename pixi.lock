@@ -534,7 +534,7 @@ packages:
 - pypi: ./
   name: repo2wasm
   version: 0.1.0
-  sha256: 2f780d54ebdff47b6a18edbbacddcaa09e28008e66dd5033880bd5b1f337a087
+  sha256: 6cf10b175aa8860fb4afd2eb5c3669c4cd396833a523eb3b0c3389e6d199649d
   requires_dist:
   - jupyterlite-core
   - jupyterlite-xeus

@@ -7,6 +7,16 @@ dependencies = [
 name = "repo2wasm"
 requires-python = ">= 3.11"
 dynamic = ["version"]
+readme = "README.md"
+license = "AGPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+
+[project.urls]
+Repository = "https://github.com/repo2wasm/repo2wasm-py.git"
+Issues = "https://github.com/repo2wasm/repo2wasm-py/issues"
+
+[project.scripts]
+repo2wasm = "repo2wasm:cli"
 
 [build-system]
 build-backend = "hatchling.build"
