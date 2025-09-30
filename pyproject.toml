@@ -33,3 +33,4 @@ repo2wasm = { path = ".", editable = true }
 
 [tool.pixi.dependencies]
 micromamba = ">=2.3.2,<3"
+jupyter_server = ">=2.17.0,<3"
