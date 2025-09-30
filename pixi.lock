@@ -21,6 +21,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libsqlite-3.50.4-h0c1763c_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libuuid-2.41.2-he9a06e4_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/libzlib-1.3.1-hb9d3cd8_2.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/micromamba-2.3.2-0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/openssl-3.5.3-h26f9b46_1.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/python-3.13.7-h2b335a9_100_cp313.conda
@@ -396,6 +397,16 @@ packages:
   version: 0.1.2
   sha256: 84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8
   requires_python: '>=3.7'
+- conda: https://conda.anaconda.org/conda-forge/linux-64/micromamba-2.3.2-0.tar.bz2
+  sha256: 5512233cdd8564a671626081026dc861537a963baa06706baab08fac6f3bb9d2
+  md5: 5fd37981e36c7220fbca6e8f9f095dee
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  license: BSD-3-Clause AND MIT AND OpenSSL
+  license_family: BSD
+  purls: []
+  size: 6499442
+  timestamp: 1756289024040
 - conda: https://conda.anaconda.org/conda-forge/linux-64/ncurses-6.5-h2d0b736_3.conda
   sha256: 3fde293232fa3fca98635e1167de6b7c7fda83caf24b9d6c91ec9eefb4f4d586
   md5: 47e340acb35de30501a76c7c799c41d7
@@ -534,11 +545,11 @@ packages:
 - pypi: ./
   name: repo2wasm
   version: 0.1.0
-  sha256: fa5525e0282317888e241121978a4e28100527e4cf303a74082fc0f1fa809861
+  sha256: 17898020fd5af16691900941dbae6d175e143df132f8691eaf928cd76be15cc3
   requires_dist:
-  - jupyterlite-core
-  - jupyterlite-xeus
-  - pyyaml
+  - jupyterlite-core>=0.6.4,<0.7
+  - jupyterlite-xeus>=4.2.2,<5
+  - pyyaml>=6.0.3,<7
   requires_python: '>=3.11'
   editable: true
 - pypi: https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl
