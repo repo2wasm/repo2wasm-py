@@ -34,10 +34,11 @@ repo2wasm = { path = ".", editable = true }
 [tool.pixi.dependencies]
 micromamba = ">=2.3.2,<3"
 
-[tool.pixi.feature.dev.dependencies]
+[tool.pixi.feature.release.dependencies]
 python-build = "*"
+twine = "*"
 
-[tool.pixi.feature.dev.tasks]
+[tool.pixi.feature.release.tasks]
 build = "python -m build"
 
 [tool.pixi.feature.docs.dependencies]
@@ -57,4 +58,4 @@ preview = "sphinx-autobuild docs/source docs/build"
 
 [tool.pixi.environments]
 docs = { features = ["docs", "docs-preview"], no-default-feature = true }
-dev = { features = ["dev"] }
+release = { features = ["release"] }
