@@ -40,6 +40,9 @@ sphinx_rtd_theme = "*"
 sphinxcontrib-mermaid = "*"
 myst-parser = "*"
 
+[tool.pixi.feature.docs.tasks]
+docs = "sphinx-build docs/source docs/build"
+
 [tool.pixi.feature.docs-preview.dependencies]
 sphinx-autobuild = "*"
 
