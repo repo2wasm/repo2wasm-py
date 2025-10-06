@@ -4,6 +4,7 @@ from jupyterlite_core.manager import LiteManager
 class BaseBuildPack(LiteManager):
     def __init__(self, repository, configuration_file, ide, output_dir):
         super().__init__()
+        self.initialize()
 
         # repo2wasm
         self.repository = repository

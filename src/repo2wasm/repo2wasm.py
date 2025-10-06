@@ -15,5 +15,6 @@ def repo2wasm(repository, ide="jupyterlab", output_dir="public"):
     logger.info("Output directory: %s", output_dir_absolute_path)
 
     buildpack = get_buildpack(repository_absolute_path, ide, output_dir)
-    buildpack.initialize()
+
     buildpack.doit_run("build")
+    buildpack.doit_run("post_build")
