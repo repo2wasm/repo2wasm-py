@@ -37,6 +37,7 @@ micromamba = ">=2.3.2,<3"
 [tool.pixi.feature.docs.dependencies]
 sphinx = "*"
 sphinx_rtd_theme = "*"
+sphinxcontrib-mermaid = "*"
 
 [tool.pixi.feature.docs-preview.dependencies]
 sphinx-autobuild = "*"

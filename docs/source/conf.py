@@ -13,9 +13,7 @@ author = "Raniere Gaia Costa da Silva"
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = [
-    "sphinx_rtd_theme",
-]
+extensions = ["sphinx_rtd_theme", "sphinxcontrib.mermaid"]
 
 templates_path = ["_templates"]
 exclude_patterns = []
