@@ -17,4 +17,4 @@ build:
       - pixi install -e rtd
     build:
       html:
-        - pixi run rtd
+        - pixi run --environment rtd rtd
