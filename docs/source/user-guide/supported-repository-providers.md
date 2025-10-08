@@ -1,3 +1,5 @@
+(supported-repository-providers)=
+
 # Supported repository providers
 
 [`jupyter-repo2docker`]'s implementation of repository providers are used here.

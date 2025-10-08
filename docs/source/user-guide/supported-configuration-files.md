@@ -1,3 +1,5 @@
+(supported-configuration-files)=
+
 # Supported configuration files
 
 ## Users
