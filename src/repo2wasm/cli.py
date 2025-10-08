@@ -49,7 +49,7 @@ def cli():
         "repository",
         nargs="?",
         default=".",
-        help="Git repository to build. Default to current directory.",
+        help="Repository to build. Default to current directory.",
     )
 
     args = parser.parse_args()

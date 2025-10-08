@@ -1,6 +1,7 @@
 import logging
 import os
 import tempfile
+from pathlib import Path
 
 import yaml
 
@@ -60,8 +61,11 @@ class CondaBuildPack(BaseBuildPack):
         _file_descriptor, _file_path = tempfile.mkstemp(
             suffix=".yml", prefix="repo2wasm-"
         )
-        logger.debug("Created temporary file %s", _file_path)
+        logger.info("Created temporary configuration file %s", _file_path)
         with os.fdopen(_file_descriptor, "w") as _file:
             yaml.dump(configuration_yaml, _file)
 
         self._addons["jupyterlite-xeus"].environment_file.append(_file_path)
+        self._addons["jupyterlite-xeus"].xeus_output_dir = (
+            Path(self.output_dir) / "xeus"
+        )
