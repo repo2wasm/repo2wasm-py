@@ -42,21 +42,22 @@ twine = "*"
 build = "python -m build"
 upload = { cmd = "python3 -m twine upload --repository pypi dist/*", depends-on = ["build"] }
 
-[tool.pixi.feature.docs.dependencies]
+[tool.pixi.feature.rtd.dependencies]
 sphinx = "*"
 sphinx_rtd_theme = "*"
 sphinxcontrib-mermaid = "*"
 myst-parser = "*"
 
-[tool.pixi.feature.docs.tasks]
-docs = "sphinx-build docs/source docs/build"
+[tool.pixi.feature.rtd.tasks]
+rtd = "sphinx-build docs/source $READTHEDOCS_OUTPUT/html"
 
-[tool.pixi.feature.docs-preview.dependencies]
+[tool.pixi.feature.docs.dependencies]
 sphinx-autobuild = "*"
 
-[tool.pixi.feature.docs-preview.tasks]
-preview = "sphinx-autobuild docs/source docs/build"
+[tool.pixi.feature.docs.tasks]
+docs = "sphinx-autobuild docs/source docs/build"
 
 [tool.pixi.environments]
-docs = { features = ["docs", "docs-preview"], no-default-feature = true }
+rtd = { features = ["rtd"], no-default-feature = true }
+docs = { features = ["rtd", "docs"], no-default-feature = true }
 release = { features = ["release"] }

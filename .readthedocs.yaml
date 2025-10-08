@@ -17,4 +17,4 @@ build:
       - pixi install -e docs
     build:
       html:
-        - pixi run docs
+        - pixi run rtd
