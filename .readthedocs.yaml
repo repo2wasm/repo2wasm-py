@@ -14,7 +14,7 @@ build:
       - asdf global pixi latest
     install:
       # assuming you have an environment called "docs"
-      - pixi install -e docs
+      - pixi install -e rtd
     build:
       html:
         - pixi run rtd
