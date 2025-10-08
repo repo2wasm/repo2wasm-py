@@ -5,4 +5,5 @@
 :caption: Table of Contents
 
 jupyterlite.md
+supported-repository-providers.md
 ```
