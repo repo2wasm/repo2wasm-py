@@ -13,7 +13,6 @@ content_providers = [
     contentproviders.Zenodo,
     contentproviders.Figshare,
     contentproviders.Dataverse,
-    contentproviders.Hydroshare,
     contentproviders.Swhid,
     contentproviders.Mercurial,
     contentproviders.Git,
