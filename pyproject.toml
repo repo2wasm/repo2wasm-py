@@ -17,10 +17,10 @@ repo2wasm = "repo2wasm:cli"
 
 [build-system]
 build-backend = "hatchling.build"
-requires = ["hatchling"]
+requires = ["hatchling", "hatch-vcs"]
 
 [tool.hatch.version]
-path = "src/repo2wasm/__init__.py"
+source = "vcs"
 
 [tool.pixi.workspace]
 channels = ["conda-forge"]

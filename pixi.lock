@@ -2299,8 +2299,8 @@ packages:
   requires_python: '>=3.9'
 - pypi: ./
   name: repo2wasm
-  version: 0.1.0
-  sha256: 132394c08b49d57b257f6795c813744cd69791dcb8a09d8b876a33b0851b3068
+  version: 0.3.1.dev0+g011d1cd17.d20251008
+  sha256: b910a3635e409541264e5f94b9dea93a83b7da54ad52b1517ab511029a53b0f7
   requires_dist:
   - jupyter-repo2docker>=2025.8.0,<2026
   - jupyter-server>=2.17.0,<3
@@ -2308,7 +2308,7 @@ packages:
   - jupyterlite-core>=0.6.4,<0.7
   - jupyterlite-xeus>=4.2.2,<5
   - pyyaml>=6.0.3,<7
-  requires_python: '>=3.11'
+  requires_python: '>=3.13'
   editable: true
 - pypi: https://files.pythonhosted.org/packages/1e/db/4254e3eabe8020b458f1a747140d32277ec7a271daf1d235b70dc0b4e6e3/requests-2.32.5-py3-none-any.whl
   name: requests
