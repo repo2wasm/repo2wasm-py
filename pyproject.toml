@@ -39,7 +39,7 @@ python-build = "*"
 twine = "*"
 
 [tool.pixi.feature.release.tasks]
-build = "python -m build"
+build = "rm -rf dist; python -m build"
 upload = { cmd = "python3 -m twine upload --repository pypi dist/*", depends-on = ["build"] }
 
 [tool.pixi.feature.rtd.dependencies]
