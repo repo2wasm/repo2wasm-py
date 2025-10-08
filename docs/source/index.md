@@ -2,7 +2,9 @@
 
 `repo2wasm` is a clone of [`jupyter-repo2docker`] targeting [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly) (Wasm) environment.
 
-[`jupyter-repo2docker`] supports a large number of [configuration files](https://repo2docker.readthedocs.io/en/latest/configuration/) and only a subset is supported by `repo2wasm` because of the nature of `repo2wasm`. `repo2wasm` has no plans to support
+Like [`jupyter-repo2docker`], `repo2wasm` provides a integrated development environment (IDE) or another environment out of the box. Different than [`jupyter-repo2docker`], `repo2wasm` provides a single environment per build.
+
+[`jupyter-repo2docker`] supports a large number of [configuration files](https://repo2docker.readthedocs.io/en/latest/configuration/) and only a subset is supported by `repo2wasm` because of the nature of `repo2wasm`. `repo2wasm` has **no** plans to support
 
 - [`apt.txt`](https://repo2docker.readthedocs.io/en/latest/configuration/system/#apt-txt-install-packages-with-apt-get)
 - [`default.nix`](https://repo2docker.readthedocs.io/en/latest/configuration/system/#default-nix-the-nix-package-manager)
@@ -14,8 +16,9 @@
 :maxdepth: 2
 :caption: Table of Contents
 
-architecture.md
-jupyterlite.md
+get-started/index.md
+user-guide/index.md
+contributor-guide/index.md
 ```
 
 [`jupyter-repo2docker`]: https://github.com/jupyterhub/repo2docker
