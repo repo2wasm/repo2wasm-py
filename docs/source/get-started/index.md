@@ -20,5 +20,5 @@ python -m pip install repo2wasm
  We'll use the [Binder `conda` example](https://github.com/binder-examples/conda), which installs a Python environment. Run
 
  ```bash
- repo2wasm https://github.com/binder-examples/conda
+ repo2wasm https://github.com/repo2wasm/requirements
  ```
