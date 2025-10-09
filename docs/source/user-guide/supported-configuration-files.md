@@ -18,10 +18,18 @@ The Python kernel is always installed when using `environment.yml` because, diff
 ![status: implemented](https://img.shields.io/badge/status-implemented-green)
 ![version: 0.4.0](https://img.shields.io/badge/version-0.4.0-blue)
 
+```{important}
+The dependencies are installed from [conda-forge] instead of [PyPI](https://pypi.org/).
+```
+
 ### `install.R`
 
 ![status: implemented](https://img.shields.io/badge/status-implemented-green)
 ![version: 0.4.0](https://img.shields.io/badge/version-0.4.0-blue)
+
+```{important}
+The dependencies are installed from [conda-forge] instead of [CRAN](https://cran.r-project.org/).
+```
 
 ### `Project.toml`
 
@@ -72,3 +80,5 @@ The Python kernel is always installed when using `environment.yml` because, diff
 ### `start`
 
 ![status: not supported](https://img.shields.io/badge/status-not_supported-red)
+
+[conda-forge]: https://conda-forge.org/
