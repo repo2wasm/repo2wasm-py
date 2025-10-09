@@ -1,0 +1,20 @@
+name: Release to PyPI
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: prefix-dev/setup-pixi@v0.9.1
+        with:
+          pixi-version: v0.56.0
+          cache: true
+      - name: Publish to PyPI
+        env:
+          TWINE_PASSWORD: ${{ secrets.PYPI_TOKEN }}
+        run: pixi run upload --non-interactive
