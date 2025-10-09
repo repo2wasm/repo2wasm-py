@@ -9,6 +9,10 @@
 ![status: implemented](https://img.shields.io/badge/status-implemented-green)
 ![version: 0.3.0](https://img.shields.io/badge/version-0.3.0-blue)
 
+```{note}
+The Python kernel is always installed when using `environment.yml` because, different than R, the Python packages don't have its own namespace.
+```
+
 ### `requirements.txt`
 
 ![status: implemented](https://img.shields.io/badge/status-implemented-green)
