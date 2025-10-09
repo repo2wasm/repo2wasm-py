@@ -1,0 +1,4 @@
+name: r
+dependencies:
+  - r-dplyr
+  - r-ggplot2

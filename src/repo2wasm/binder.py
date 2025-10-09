@@ -3,6 +3,7 @@ import os.path
 
 from .buildpacks.conda import CondaBuildPack
 from .buildpacks.requirements import RequirementsBuildPack
+from .buildpacks.install import InstallBuildPack
 
 logger = logging.getLogger(__name__)
 
@@ -11,6 +12,7 @@ ALLOWED_BINDER_DIR = [".binder", "binder", "."]
 ALLOWED_BINDER_CONFIGURATION_MAPPING = {
     "environment.yml": CondaBuildPack,
     "requirements.txt": RequirementsBuildPack,
+    "install.R": InstallBuildPack,
 }
 
 
