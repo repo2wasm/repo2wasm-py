@@ -5,7 +5,7 @@
 :caption: Table of Contents
 
 supported-programming-languages.md
-jupyterlite.md
+supported-ide.md
 supported-configuration-files.md
 supported-repository-providers.md
 ```

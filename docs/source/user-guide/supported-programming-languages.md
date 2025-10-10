@@ -2,9 +2,13 @@
 
 # Supported programming languages
 
-`repo2wasm` only suports programming languages already compiled to Wasm.
+`repo2wasm` only suports programming languages already compiled to Wasm, packaged by the [`emscripten-forge` organisation on GitHub](https://github.com/emscripten-forge), and available on the [`emscripten-forge-dev` channel hosted by Prefix.dev GmbH](https://prefix.dev/channels/emscripten-forge-dev). 
 
 ## Python
+
+```{note}
+Check the [`python` package](https://prefix.dev/channels/emscripten-forge-dev/packages/python) for updated information.
+```
 
 | Version | Available | Latest release if available | Latest release date |
 | --- | --- | --- | --- |
@@ -16,6 +20,10 @@
 | 3.9  | ❌ | | |
 
 ## R
+
+```{note}
+Check the [`r-base` package](https://prefix.dev/channels/emscripten-forge-dev/packages/r-base) for updated information.
+```
 
 | Version | Available | Latest release if available | Latest release date |
 | --- | --- | --- | --- |
