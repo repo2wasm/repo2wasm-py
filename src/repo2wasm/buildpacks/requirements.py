@@ -6,13 +6,16 @@ from pathlib import Path
 import yaml
 
 from .base import BaseBuildPack
+from .utils import clean_dependency
 
 logger = logging.getLogger(__name__)
 
 
 class RequirementsBuildPack(BaseBuildPack):
-    def __init__(self, repository, configuration_file, ide, output_dir):
-        super().__init__(repository, configuration_file, ide, output_dir)
+    def __init__(
+        self, repository, configuration_file, ide, output_dir, forgiving=False
+    ):
+        super().__init__(repository, configuration_file, ide, output_dir, forgiving)
 
         logger.debug("Configuration file: %s", self.configuration_file)
 
@@ -28,9 +31,10 @@ class RequirementsBuildPack(BaseBuildPack):
         with open(self.configuration_file, "r") as _file:
             requirements_txt = _file.readlines()
 
-        configuration_yaml["dependencies"].extend(
-            [dependency.strip() for dependency in requirements_txt]
-        )
+        if self.forgiving:
+            configuration_yaml["dependencies"].extend(
+                [clean_dependency(dependency) for dependency in requirements_txt]
+            )
 
         _file_descriptor, _file_path = tempfile.mkstemp(
             suffix=".yml", prefix="repo2wasm-"

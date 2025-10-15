@@ -18,8 +18,10 @@ def clean_line_from_install_r(line):
 
 
 class InstallBuildPack(BaseBuildPack):
-    def __init__(self, repository, configuration_file, ide, output_dir):
-        super().__init__(repository, configuration_file, ide, output_dir)
+    def __init__(
+        self, repository, configuration_file, ide, output_dir, forgiving=False
+    ):
+        super().__init__(repository, configuration_file, ide, output_dir, forgiving)
 
         logger.debug("Configuration file: %s", self.configuration_file)
 

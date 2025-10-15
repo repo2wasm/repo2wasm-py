@@ -21,6 +21,13 @@ def cli():
     )
 
     parser.add_argument(
+        "-f",
+        "--forgiving",
+        action="store_true",
+        help="Ignore the provided version number given that only a few versions are available in Wasm.",
+    )
+
+    parser.add_argument(
         "-o",
         "--output-dir",
         default="public",
@@ -69,4 +76,9 @@ def cli():
 
     logging.basicConfig(encoding="utf-8", level=selected_logging_level)
 
-    repo2wasm(args.repository, ide=args.ide, output_dir=args.output_dir)
+    repo2wasm(
+        args.repository,
+        ide=args.ide,
+        output_dir=args.output_dir,
+        forgiving=args.forgiving,
+    )
