@@ -25,4 +25,4 @@ jobs:
           pixi-version: v0.56.0
           cache: true
       - name: Test example
-        run: pixi run repo2wasm ${{ matrix.version }}
+        run: pixi run repo2wasm ${{ matrix.example_path }}
