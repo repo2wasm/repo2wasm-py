@@ -17,6 +17,7 @@ Like [`jupyter-repo2docker`], `repo2wasm` provides [JupyterLab](https://jupyterl
 get-started/index.md
 limitations.md
 user-guide/index.md
+common-errors/index.md
 contributor-guide/index.md
 changelog.md
 ```

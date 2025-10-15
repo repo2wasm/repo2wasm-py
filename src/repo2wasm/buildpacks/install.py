@@ -5,6 +5,7 @@ from pathlib import Path
 
 import yaml
 
+from . import exceptions
 from .base import BaseBuildPack
 
 logger = logging.getLogger(__name__)
@@ -48,6 +49,10 @@ class InstallBuildPack(BaseBuildPack):
                 if dependency is not None
             ]
         )
+
+        for dependency in configuration_yaml["dependencies"]:
+            if dependency.startswith("r-tidyverse"):
+                raise exceptions.TidyVerseError()
 
         _file_descriptor, _file_path = tempfile.mkstemp(
             suffix=".yml", prefix="repo2wasm-"

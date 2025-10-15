@@ -5,6 +5,7 @@ from pathlib import Path
 
 import yaml
 
+from . import exceptions
 from .base import BaseBuildPack
 from .utils import clean_dependency
 
@@ -45,6 +46,10 @@ class CondaBuildPack(BaseBuildPack):
                 clean_dependency(dependency)
                 for dependency in configuration_yaml["dependencies"]
             ]
+
+        for dependency in configuration_yaml["dependencies"]:
+            if dependency.startswith("r-tidyverse"):
+                raise exceptions.TidyVerseError()
 
         requires_r = False
         for dependency in configuration_yaml["dependencies"]:
