@@ -15,6 +15,7 @@ Like [`jupyter-repo2docker`], `repo2wasm` provides [JupyterLab](https://jupyterl
 :caption: Table of Contents
 
 get-started/index.md
+limitations.md
 user-guide/index.md
 contributor-guide/index.md
 changelog.md
