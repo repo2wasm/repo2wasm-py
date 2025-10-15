@@ -10,7 +10,7 @@ from .base import BaseBuildPack
 logger = logging.getLogger(__name__)
 
 
-def clean_line_frominstall_r(line):
+def clean_line_from_install_r(line):
     if line.startswith("install.packages("):
         return line.replace('install.packages("', "").replace('")', "")
 
@@ -18,8 +18,10 @@ def clean_line_frominstall_r(line):
 
 
 class InstallBuildPack(BaseBuildPack):
-    def __init__(self, repository, configuration_file, ide, output_dir):
-        super().__init__(repository, configuration_file, ide, output_dir)
+    def __init__(
+        self, repository, configuration_file, ide, output_dir, forgiving=False
+    ):
+        super().__init__(repository, configuration_file, ide, output_dir, forgiving)
 
         logger.debug("Configuration file: %s", self.configuration_file)
 
@@ -36,7 +38,7 @@ class InstallBuildPack(BaseBuildPack):
             install_r = _file.readlines()
 
         raw_dependencies = [
-            clean_line_frominstall_r(dependency) for dependency in install_r
+            clean_line_from_install_r(dependency) for dependency in install_r
         ]
 
         configuration_yaml["dependencies"].extend(

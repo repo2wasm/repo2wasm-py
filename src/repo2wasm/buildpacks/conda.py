@@ -6,13 +6,16 @@ from pathlib import Path
 import yaml
 
 from .base import BaseBuildPack
+from .utils import clean_dependency
 
 logger = logging.getLogger(__name__)
 
 
 class CondaBuildPack(BaseBuildPack):
-    def __init__(self, repository, configuration_file, ide, output_dir):
-        super().__init__(repository, configuration_file, ide, output_dir)
+    def __init__(
+        self, repository, configuration_file, ide, output_dir, forgiving=False
+    ):
+        super().__init__(repository, configuration_file, ide, output_dir, forgiving)
 
         logger.debug("Configuration file: %s", self.configuration_file)
 
@@ -36,6 +39,12 @@ class CondaBuildPack(BaseBuildPack):
         if "dependencies" not in configuration_yaml:
             logger.info("Environment's dependencies is missing. Using empty list.")
             configuration_yaml["dependencies"] = []
+
+        if self.forgiving:
+            configuration_yaml["dependencies"] = [
+                clean_dependency(dependency)
+                for dependency in configuration_yaml["dependencies"]
+            ]
 
         requires_r = False
         for dependency in configuration_yaml["dependencies"]:

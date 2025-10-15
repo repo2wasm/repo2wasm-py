@@ -2,7 +2,9 @@ from jupyterlite_core.manager import LiteManager
 
 
 class BaseBuildPack(LiteManager):
-    def __init__(self, repository, configuration_file, ide, output_dir):
+    def __init__(
+        self, repository, configuration_file, ide, output_dir, forgiving=False
+    ):
         super().__init__()
         self.initialize()
 
@@ -10,6 +12,7 @@ class BaseBuildPack(LiteManager):
         self.repository = repository
         self.configuration_file = configuration_file
         self.ide = ide
+        self.forgiving = forgiving
 
         # JupyterLite
         if self.ide == "jupyterlab":
