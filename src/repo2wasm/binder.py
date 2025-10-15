@@ -28,7 +28,7 @@ def find_configuration_file(path_to_repository):
     raise RuntimeError("Configuration file not found.")
 
 
-def get_buildpack(path_to_repository, ide, output_dir):
+def get_buildpack(path_to_repository, ide, output_dir, forgiving=False):
     configuration_file_path = find_configuration_file(path_to_repository)
 
     configuration_file = os.path.basename(configuration_file_path)
@@ -39,7 +39,7 @@ def get_buildpack(path_to_repository, ide, output_dir):
     ) in ALLOWED_BINDER_CONFIGURATION_MAPPING.items():
         if configuration_file == buildpack_configuration_file:
             return BuildPack(
-                path_to_repository, configuration_file_path, ide, output_dir
+                path_to_repository, configuration_file_path, ide, output_dir, forgiving
             )
 
     raise RuntimeError("Build pack not found.")
