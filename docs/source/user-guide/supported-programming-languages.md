@@ -37,7 +37,7 @@ Check the [`r-base` package](https://prefix.dev/channels/emscripten-forge-dev/pa
 
 ### `tidyverse`
 
-[`tidyverse`] is a collection of R packages popular in data science. Unfortunately, [`tidyverse`] is not available at `repo2wasm` because [`lubridate`](https://cran.r-project.org/web/packages/lubridate/index.html), one of the packages in of [core `tidyverse`], is missing. All other packages from [core `tidyverse`] are available.
+[`tidyverse`] is a collection of R packages popular in data science. Unfortunately, [`tidyverse`] is not available at `repo2wasm` because some packages depend on `curl` that is not available.
 
 ```{note}
 Visit [jupyterlite/jupyterlite#1753](https://github.com/jupyterlite/jupyterlite/discussions/1753) for updated regarding the availability of `tidyverse`.
