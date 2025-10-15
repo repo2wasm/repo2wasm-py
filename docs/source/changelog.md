@@ -4,6 +4,7 @@
 
 ### Enhancements made
 
+- Add earlier error detection
 - Enable tests as GitHub Actions
 - Add `--forgiving` to ignore version of dependencies
 
