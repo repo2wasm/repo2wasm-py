@@ -8,3 +8,7 @@
 ## Jupyter Notebook
 
 ![status: not implemented](https://img.shields.io/badge/status-not_implemented-pink)
+
+## webR REPL
+
+![status: not implemented](https://img.shields.io/badge/status-not_implemented-pink)
