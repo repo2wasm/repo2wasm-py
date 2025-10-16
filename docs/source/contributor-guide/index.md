@@ -5,4 +5,5 @@
 :caption: Table of Contents
 
 architecture.md
+docs.md
 ```
