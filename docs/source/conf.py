@@ -26,6 +26,13 @@ html_static_path = ["_static"]
 html_logo = "_static/img/repo2wasm-square.svg"
 html_favicon = "_static/img/favicon.png"
 html_copy_source = False
+html_context = {
+    "display_github": True,
+    "github_user": "repo2wasm",
+    "github_repo": "repo2wasm-py",
+    "github_version": "main",
+    "conf_py_path": "/docs/source/",
+}
 
 # -- Options for Read the Docs theme ------------------------------------------
 # https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
