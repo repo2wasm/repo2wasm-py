@@ -2223,8 +2223,8 @@ packages:
   requires_python: '>=3.10'
 - pypi: ./
   name: repo2wasm
-  version: 0.5.1.dev1+g0ba03b702
-  sha256: e9e96d84d0f40b9d885708d53a323be75f4a26f0bf6ff46dd2053bb103ec165f
+  version: 0.5.1.dev12+g3e3fc8a31.d20251016
+  sha256: 130cd212d8cc615dabf267c6d625fbc7e5e5aa0683068813b990903b9884dcaa
   requires_dist:
   - jupyter-repo2docker>=2025.8.0,<2026
   - jupyter-server>=2.17.0,<3
