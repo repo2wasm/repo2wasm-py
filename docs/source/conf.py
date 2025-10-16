@@ -39,5 +39,5 @@ html_context = {
 html_theme_options = {
     "display_version": True,
     "prev_next_buttons_location": "both",
-    "style_external_links": True
+    "style_external_links": True,
 }
