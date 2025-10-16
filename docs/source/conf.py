@@ -18,9 +18,19 @@ extensions = ["myst_parser", "sphinx_rtd_theme", "sphinxcontrib.mermaid"]
 templates_path = ["_templates"]
 exclude_patterns = []
 
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ["_static"]
+html_logo = "_static/img/repo2wasm-square.svg"
+html_favicon = "_static/img/favicon.png"
+html_copy_source = False
+
+# -- Options for Read the Docs theme ------------------------------------------
+# https://sphinx-rtd-theme.readthedocs.io/en/stable/configuring.html
+html_theme_options = {
+    "display_version": True,
+    "prev_next_buttons_location": "both",
+    "style_external_links": True
+}
