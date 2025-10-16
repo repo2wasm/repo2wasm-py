@@ -63,13 +63,13 @@ sphinxcontrib-mermaid = "*"
 myst-parser = "*"
 
 [tool.pixi.feature.rtd.tasks]
-rtd = "sphinx-build -M dirhtml docs/source $READTHEDOCS_OUTPUT/html"
+rtd = "sphinx-build --builder dirhtml docs/source $READTHEDOCS_OUTPUT/html"
 
 [tool.pixi.feature.docs.dependencies]
 sphinx-autobuild = "*"
 
 [tool.pixi.feature.docs.tasks]
-docs = "sphinx-autobuild -M dirhtml docs/source docs/build"
+docs = "sphinx-autobuild --builder dirhtml docs/source docs/build"
 
 [tool.pixi.environments]
 rtd = { features = ["rtd"], no-default-feature = true }
