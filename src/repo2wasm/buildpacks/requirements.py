@@ -31,10 +31,12 @@ class RequirementsBuildPack(BaseBuildPack):
         with open(self.configuration_file, "r") as _file:
             requirements_txt = _file.readlines()
 
-        if self.forgiving:
-            configuration_yaml["dependencies"].extend(
-                [clean_dependency(dependency) for dependency in requirements_txt]
-            )
+        configuration_yaml["dependencies"].extend(
+            [
+                clean_dependency(dependency, self.forgiving)
+                for dependency in requirements_txt
+            ]
+        )
 
         _file_descriptor, _file_path = tempfile.mkstemp(
             suffix=".yml", prefix="repo2wasm-"
