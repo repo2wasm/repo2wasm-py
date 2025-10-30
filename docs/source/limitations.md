@@ -14,3 +14,7 @@ Web browsers execute the [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly
 C. Gerard Gallant.
 - [Emscripten Documentation](https://emscripten.org/docs/index.html)
 - [Easier WebAssembly with twr-wasm: Wasm Runtime Limitations](https://twiddlingbits.dev/docsite/more/wasm-problem/)
+- [Making libcurl work in webassembly](https://jeroen.github.io/notes/webassembly-curl/) by Jeroen.
+- [libcurl.js](https://libcurl.js.org/)
+- [webR - Networking](https://docs.r-wasm.org/webr/latest/networking.html)
+- [Making HTTP Requests with Pyodide](https://nickgeorge.net/pyodide-http-requests/) by Nick George.
