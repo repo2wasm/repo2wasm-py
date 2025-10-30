@@ -50,7 +50,9 @@ def fetch_repository(repository):
     return checkout_path
 
 
-def repo2wasm(repository, ide="jupyterlab", output_dir="public", forgiving=False):
+def repo2wasm(
+    repository, ignore=[], ide="jupyterlab", output_dir="public", forgiving=False
+):
     output_dir_absolute_path = os.path.abspath(output_dir)
 
     logger.info("Repository: %s", repository)
@@ -59,7 +61,9 @@ def repo2wasm(repository, ide="jupyterlab", output_dir="public", forgiving=False
 
     checkout_path = fetch_repository(repository)
     try:
-        buildpack = get_buildpack(checkout_path, ide, output_dir, forgiving)
+        buildpack = get_buildpack(
+            checkout_path, ide, output_dir, forgiving=forgiving, ignore=ignore
+        )
 
         buildpack.doit_run("build")
         buildpack.doit_run("post_build")
