@@ -50,6 +50,8 @@ class CondaBuildPack(BaseBuildPack):
         for dependency in configuration_yaml["dependencies"]:
             if dependency.startswith("r-tidyverse"):
                 raise exceptions.TidyVerseError()
+            if dependency.startswith("octave_kernel"):
+                raise exceptions.OctaveKernelError()
 
         requires_r = False
         for dependency in configuration_yaml["dependencies"]:

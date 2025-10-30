@@ -14,3 +14,8 @@ class Repo2WasmError(Exception):
 class TidyVerseError(Repo2WasmError):
     error_page = "tidyverse"
     long_message = "tidyverse library is NOT supported."
+
+
+class OctaveKernelError(Repo2WasmError):
+    error_page = "octave-kernel"
+    long_message = "octave-kernel is NOT supported. Use xeus-octave instead."
