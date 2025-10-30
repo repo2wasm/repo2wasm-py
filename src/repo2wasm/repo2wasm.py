@@ -61,7 +61,7 @@ def repo2wasm(repository, ide="jupyterlab", output_dir="public", forgiving=False
     try:
         buildpack = get_buildpack(checkout_path, ide, output_dir, forgiving)
 
-        buildpack.doit_run("build")
+        # doit_run will run all the necessary previous steps
         buildpack.doit_run("post_build")
     except Repo2WasmError as error:
         logger.error(error)
