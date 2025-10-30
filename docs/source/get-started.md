@@ -21,8 +21,21 @@ python -m pip install repo2wasm
 
 ## Build a repository with `repo2wasm`
 
- We'll use a fork of [Binder `requirements` example](https://github.com/repo2wasm/requirements), which installs a Python environment. Run
+We'll use a fork of [Binder `requirements` example](https://github.com/repo2wasm/requirements), which installs a Python environment. Run
 
- ```bash
- repo2wasm https://github.com/repo2wasm/requirements
- ```
+```bash
+repo2wasm https://github.com/repo2wasm/requirements
+```
+
+A new directory `public` will be created.
+
+## Launch JupyterLite
+
+Run
+
+```bash
+cd public
+python -m http.server
+```
+
+and open <http://localhost:8000>.
