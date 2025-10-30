@@ -13,7 +13,7 @@
 ### Enhancements made
 
 - Support `install.R`.
-- Support to `requirements.txt`. 
+- Support to `requirements.txt`.
 
 ## 0.3.0
 
