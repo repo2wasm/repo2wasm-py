@@ -56,6 +56,12 @@ twine = "*"
 build = "rm -rf dist; python -m build"
 upload = { cmd = "python3 -m twine upload --repository pypi dist/*", depends-on = ["build"] }
 
+[tool.pixi.feature.ci.dependencies]
+pre-commit = "*"
+
+[tool.pixi.feature.ci.tasks]
+pre-commit = "pre-commit run --all-files"
+
 [tool.pixi.feature.rtd.dependencies]
 sphinx = "*"
 sphinx_rtd_theme = "*"
@@ -72,6 +78,7 @@ sphinx-autobuild = "*"
 docs = "sphinx-autobuild --builder dirhtml docs/source docs/build"
 
 [tool.pixi.environments]
+ci = { features = ["ci"], no-default-feature = true }
 rtd = { features = ["rtd"], no-default-feature = true }
 docs = { features = ["rtd", "docs"], no-default-feature = true }
 release = { features = ["release"] }
