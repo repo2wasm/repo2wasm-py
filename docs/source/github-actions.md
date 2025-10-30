@@ -1,6 +1,6 @@
 # GitHub Actions and GitHub Pages
 
-`repo2docker` is available as a [GitHub Action](https://docs.github.com/en/actions) from [GitHub Marketplace](https://github.com/marketplace) under the same name, i.e. [`repo2docker`](https://github.com/marketplace/actions/repo2wasm), to publish the integrated development environment (IDE) to [GitHub Pages](https://docs.github.com/en/pages).
+`repo2wasm` is available as a [GitHub Action](https://docs.github.com/en/actions) from [GitHub Marketplace](https://github.com/marketplace) under the same name, i.e. [`repo2wasm`](https://github.com/marketplace/actions/repo2wasm), to publish the integrated development environment (IDE) to [GitHub Pages](https://docs.github.com/en/pages).
 
 ## Usage
 
