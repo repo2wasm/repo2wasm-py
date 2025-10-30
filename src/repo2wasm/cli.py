@@ -28,6 +28,13 @@ def cli():
     )
 
     parser.add_argument(
+        "-i",
+        "--ignore",
+        nargs="*",
+        help="Path regular expressions to not include as contents.",
+    )
+
+    parser.add_argument(
         "-o",
         "--output-dir",
         default="public",
@@ -78,6 +85,7 @@ def cli():
 
     repo2wasm(
         args.repository,
+        ignore=(args.ignore if args.ignore is not None else []),
         ide=args.ide,
         output_dir=args.output_dir,
         forgiving=args.forgiving,
