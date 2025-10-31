@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.5.2
+
+### Bugs fixed
+
+- Ignore `.pixi` directory
+
+## 0.5.1
+
+- Fix `--forgiving` for `requirements.txt`
+
+### Bugs fixed
+
 ## 0.5.0
 
 ### Enhancements made
