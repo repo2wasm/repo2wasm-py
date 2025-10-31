@@ -29,6 +29,10 @@ Check the [`python` package](https://prefix.dev/channels/emscripten-forge-dev/pa
 Check the [`r-base` package](https://prefix.dev/channels/emscripten-forge-dev/packages/r-base) for updated information.
 ```
 
+```{warning}
+Access to the internet is **not** possible. The R package [`curl`](https://cran.r-project.org/web/packages/curl/index.html) was not ported to Wasm.
+```
+
 | Version | Available | Latest release if available | Latest release date |
 | --- | --- | --- | --- |
 | 4.5 | ✔️ | 4.5.1 | 2025-06 |
