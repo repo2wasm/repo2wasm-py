@@ -11,6 +11,11 @@ class Repo2WasmError(Exception):
         super().__init__(final_message, *args, **kwargs)
 
 
+class IRKernelError(Repo2WasmError):
+    error_page = "irkernel"
+    long_message = "irkernel library is NOT supported. Use xeus-r instead."
+
+
 class TidyVerseError(Repo2WasmError):
     error_page = "tidyverse"
     long_message = "tidyverse library is NOT supported."
