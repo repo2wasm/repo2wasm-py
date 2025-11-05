@@ -7,6 +7,7 @@ Because some popular packages from "[](#supported-programming-languages)" might 
 ```{toctree}
 :maxdepth: 1
 
+irkernel.md
 octave-kernel.md
 tidyverse.md
 ```

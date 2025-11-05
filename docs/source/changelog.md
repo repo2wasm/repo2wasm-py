@@ -2,6 +2,10 @@
 
 ## 0.6.0
 
+### Enhancements made
+
+- Raise exception for `irkernel`
+
 ## 0.5.2
 
 ### Bugs fixed

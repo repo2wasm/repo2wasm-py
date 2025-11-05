@@ -48,6 +48,8 @@ class CondaBuildPack(BaseBuildPack):
             ]
 
         for dependency in configuration_yaml["dependencies"]:
+            if dependency.startswith("r-irkernel"):
+                raise exceptions.IRKernelError()
             if dependency.startswith("r-tidyverse"):
                 raise exceptions.TidyVerseError()
             if dependency.startswith("octave_kernel"):
