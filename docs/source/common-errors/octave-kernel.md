@@ -9,7 +9,7 @@ The alternative [`xeus-octave`] Jupyter kernel is supported.
 ## Problematic Code
 
 ```yaml
-name: r
+name: octave
 dependencies:
   - octave_kernel
 ```
@@ -17,7 +17,7 @@ dependencies:
 ## Correct Code
 
 ```yaml
-name: r
+name: octave
 dependencies:
   - xeus-octave
 ```
