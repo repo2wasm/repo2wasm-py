@@ -7,6 +7,18 @@ Web browsers execute the [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly
 - [single instruction, multiple data (SIMD)](https://en.wikipedia.org/wiki/Single_instruction,_multiple_data) is still being standardized and implemented by browsers.
 - can **only** escape the sandbox going through appropriate APIs.
 
+## Network
+
+The biggest limitation for the end user is probably related with access to the internet that can happen using [Fetch API] or proxy.
+
+## Fetch API
+
+The Wasm code uses the [Fetch API] directly and follows the same security of JavaScript running in the browser, for example [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS).
+
+# Proxy
+
+The Wasm code uses the [Fetch API] to contact a proxy server that is responsible to fulfill the access to the internet.
+
 ## References
 
 - [WebAssembly - Documentation - Security](https://webassembly.org/docs/security/)
@@ -18,3 +30,5 @@ C. Gerard Gallant.
 - [libcurl.js](https://libcurl.js.org/)
 - [webR - Networking](https://docs.r-wasm.org/webr/latest/networking.html)
 - [Making HTTP Requests with Pyodide](https://nickgeorge.net/pyodide-http-requests/) by Nick George.
+
+[Fetch API]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
