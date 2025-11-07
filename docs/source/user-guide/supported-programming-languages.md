@@ -50,7 +50,7 @@ Check the [`octave` package](https://prefix.dev/channels/emscripten-forge-dev/pa
 ```
 
 ```{warning}
-Access to the internet is **not** possible, in other words, the functions `web()`, `urlread()`, `urlwrite()`, `webread()`, and `webwrite() described in the section [WWW Access](https://docs.octave.org/latest/WWW-Access.html) do **not** work.
+Access to the internet is **not** possible, in other words, the functions `web()`, `urlread()`, `urlwrite()`, `webread()`, and `webwrite()` described in the section [WWW Access](https://docs.octave.org/latest/WWW-Access.html) do **not** work.
 ```
 
 | Version | Available | Latest release if available | Latest release date |
