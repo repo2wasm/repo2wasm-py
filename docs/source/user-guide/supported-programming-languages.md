@@ -30,7 +30,7 @@ Check the [`r-base` package](https://prefix.dev/channels/emscripten-forge-dev/pa
 ```
 
 ```{warning}
-Access to the internet is **not** possible. The R package [`curl`](https://cran.r-project.org/web/packages/curl/index.html) was not ported to Wasm.
+Access to the internet is limited. `download.file()` works but the R package [`curl`](https://cran.r-project.org/web/packages/curl/index.html) was not ported to Wasm.
 ```
 
 | Version | Available | Latest release if available | Latest release date |
