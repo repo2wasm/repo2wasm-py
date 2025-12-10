@@ -20,5 +20,5 @@ jobs:
       id-token: write
     steps:
       - name: Create IDE and publish to GitHub Pages
-        uses: repo2wasm/gh-actions@0.4.0
+        uses: repo2wasm/gh-actions@0.5.0
 ```
