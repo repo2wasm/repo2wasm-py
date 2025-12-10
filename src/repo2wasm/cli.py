@@ -1,4 +1,6 @@
+import http.server
 import logging
+import socketserver
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +34,25 @@ def cli():
         "--output-dir",
         default="public",
         help="The directory to write the files.",
+    )
+
+    run_group = parser.add_mutually_exclusive_group()
+    run_group.add_argument(
+        "--run",
+        action="store_true",
+        help="Run web server after it has been built (default).",
+    )
+    run_group.add_argument(
+        "--no-run",
+        action="store_true",
+        help="Do not run web server after it has been built.",
+    )
+
+    parser.add_argument(
+        "--port",
+        type=int,
+        default=8000,
+        help="Port to bind when (insecurely) serving the IDE.",
     )
 
     logging_level = parser.add_mutually_exclusive_group()
@@ -82,3 +103,14 @@ def cli():
         output_dir=args.output_dir,
         forgiving=args.forgiving,
     )
+
+    if not args.no_run:
+        # Based on https://stackoverflow.com/a/60658796/1802726
+
+        class Handler(http.server.SimpleHTTPRequestHandler):
+            def __init__(self, *args, **kwargs):
+                super().__init__(*args, directory=args.output_dir, **kwargs)
+
+        with socketserver.TCPServer(("", args.port), Handler) as httpd:
+            print("serving at port", args.port)
+            httpd.serve_forever()
