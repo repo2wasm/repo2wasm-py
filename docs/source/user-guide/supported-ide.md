@@ -9,7 +9,8 @@ The provided JupyterLab is based on [JupyterLite].
 
 ## Jupyter Notebook
 
-![status: not implemented](https://img.shields.io/badge/status-not_implemented-pink)
+![status: implemented](https://img.shields.io/badge/status-implemented-green)
+![version: 0.6.0](https://img.shields.io/badge/version-0.6.0-blue)
 
 The provided Jupyter Notebook is based on [JupyterLite].
 

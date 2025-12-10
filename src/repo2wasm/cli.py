@@ -15,7 +15,7 @@ def cli():
 
     parser.add_argument(
         "--ide",
-        choices=["jupyterlab"],
+        choices=["jupyterlab", "notebook"],
         default="jupyterlab",
         help="The integrated development environment (IDE) to configure.",
     )

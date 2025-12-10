@@ -4,6 +4,7 @@
 
 ### Enhancements made
 
+- Jupyter Notebook as IDE is supported
 - Raise exception for `irkernel`
 
 ## 0.5.2

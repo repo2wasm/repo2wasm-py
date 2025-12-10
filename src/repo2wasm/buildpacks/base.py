@@ -23,6 +23,10 @@ class BaseBuildPack(LiteManager):
         # JupyterLite
         if self.ide == "jupyterlab":
             self.apps = ("lab",)
+        elif self.ide == "notebook":
+            self.apps = ("tree",)
+        else:
+            self.apps = ("lab",)
 
         self.contents = (self.repository,)
         self.output_dir = output_dir
