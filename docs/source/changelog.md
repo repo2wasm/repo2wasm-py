@@ -4,6 +4,7 @@
 
 ### Enhancements made
 
+- Upgrade JupyterLite to 0.7.0
 - Jupyter Notebook as IDE is supported
 - Raise exception for `irkernel`
 
