@@ -14,9 +14,22 @@ logger = logging.getLogger(__name__)
 
 class CondaBuildPack(BaseBuildPack):
     def __init__(
-        self, repository, configuration_file, ide, output_dir, forgiving=False
+        self,
+        repository,
+        configuration_file,
+        ide,
+        output_dir,
+        forgiving=False,
+        ignore=[],
     ):
-        super().__init__(repository, configuration_file, ide, output_dir, forgiving)
+        super().__init__(
+            repository,
+            configuration_file,
+            ide,
+            output_dir,
+            forgiving=forgiving,
+            ignore=ignore,
+        )
 
         logger.debug("Configuration file: %s", self.configuration_file)
 
