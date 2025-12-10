@@ -1,5 +1,11 @@
 # Supported integrated development environment (IDE)
 
+## Read–eval–print loop (REPL)
+
+![status: not planned](https://img.shields.io/badge/status-not_planned-red)
+
+The simplest interactive computer programming environment is a [read–eval–print loop](https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop) (REPL). Although JupyterLite offers a REPL as a IDE, `repo2wasm` does not supports it.
+
 ## JupyterLab
 
 ![status: implemented](https://img.shields.io/badge/status-implemented-green)

@@ -26,7 +26,7 @@ class BaseBuildPack(LiteManager):
         elif self.ide == "notebook":
             self.apps = ("tree",)
         else:
-            self.apps = ("lab",)
+            raise RuntimeError(f"App '{self.ide}' not supported by repo2wasm.")
 
         self.contents = (self.repository,)
         self.output_dir = output_dir
