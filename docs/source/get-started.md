@@ -27,15 +27,8 @@ We'll use a fork of [Binder `requirements` example](https://github.com/repo2wasm
 repo2wasm https://github.com/repo2wasm/requirements
 ```
 
-A new directory `public` will be created.
+A new directory `public` will be created and a local web server will start. Open <http://localhost:8000>.
 
-## Launch JupyterLite
-
-Run
-
-```bash
-cd public
-python -m http.server
+```{note}
+To not start the local web server, use `--no-run`.
 ```
-
-and open <http://localhost:8000>.

@@ -4,6 +4,7 @@
 
 ### Enhancements made
 
+- Run local server after build
 - Upgrade JupyterLite to 0.7.0
 - Jupyter Notebook as IDE is supported
 - Raise exception for `irkernel`
