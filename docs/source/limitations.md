@@ -11,11 +11,11 @@ Web browsers execute the [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly
 
 The biggest limitation for the end user is probably related with access to the internet that can happen using [Fetch API] or proxy.
 
-## Fetch API
+### Fetch API
 
 The Wasm code uses the [Fetch API] directly and follows the same security of JavaScript running in the browser, for example [Cross-Origin Resource Sharing (CORS)](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/CORS).
 
-# Proxy
+### Proxy
 
 The Wasm code uses the [Fetch API] to contact a proxy server that is responsible to fulfill the access to the internet.
 
