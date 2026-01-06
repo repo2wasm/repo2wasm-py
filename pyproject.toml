@@ -43,7 +43,10 @@ platforms = ["linux-64"]
 repo2wasm = { path = ".", editable = true }
 
 [tool.pixi.tasks]
-test = { cmd = "python3 -m unittest", cwd = "src/repo2wasm/" }
+[tool.pixi.tasks.test]
+description = "Run test locally"
+cmd = "python3 -m unittest"
+cwd = "src/repo2wasm/"
 
 [tool.pixi.dependencies]
 micromamba = ">=2.3.2,<3"
@@ -52,15 +55,21 @@ micromamba = ">=2.3.2,<3"
 python-build = "*"
 twine = "*"
 
-[tool.pixi.feature.release.tasks]
-build = "rm -rf dist; python -m build"
-upload = { cmd = "python3 -m twine upload --repository pypi dist/*", depends-on = ["build"] }
+[tool.pixi.feature.release.tasks.build]
+description = "Build source into Python package"
+cmd = "rm -rf dist; python -m build"
+
+[tool.pixi.feature.release.tasks.upload]
+description = "Upload package to PyPI" 
+cmd = "python3 -m twine upload --repository pypi dist/*"
+depends-on = ["build"]
 
 [tool.pixi.feature.ci.dependencies]
 pre-commit = "*"
 
-[tool.pixi.feature.ci.tasks]
-pre-commit = "pre-commit run --all-files"
+[tool.pixi.feature.ci.tasks.pre-commit]
+description = "Run pre-commit locally"
+cmd = "pre-commit run --all-files"
 
 [tool.pixi.feature.rtd.dependencies]
 sphinx = "*"
@@ -68,14 +77,16 @@ sphinx_rtd_theme = "*"
 sphinxcontrib-mermaid = "*"
 myst-parser = "*"
 
-[tool.pixi.feature.rtd.tasks]
-rtd = "sphinx-build --builder dirhtml docs/source $READTHEDOCS_OUTPUT/html"
+[tool.pixi.feature.rtd.tasks.rtd]
+description = "Build documentation as Read The Docs"
+cmd = "sphinx-build --builder dirhtml docs/source $READTHEDOCS_OUTPUT/html"
 
 [tool.pixi.feature.docs.dependencies]
 sphinx-autobuild = "*"
 
-[tool.pixi.feature.docs.tasks]
-docs = "sphinx-autobuild --builder dirhtml docs/source docs/build"
+[tool.pixi.feature.docs.tasks.docs]
+description = "Start documentation preview server"
+cmd = "sphinx-autobuild --builder dirhtml docs/source docs/build"
 
 [tool.pixi.environments]
 ci = { features = ["ci"], no-default-feature = true }
