@@ -60,7 +60,7 @@ description = "Build source into Python package"
 cmd = "rm -rf dist; python -m build"
 
 [tool.pixi.feature.release.tasks.upload]
-description = "Upload package to PyPI" 
+description = "Upload package to PyPI"
 cmd = "python3 -m twine upload --repository pypi dist/*"
 depends-on = ["build"]
 

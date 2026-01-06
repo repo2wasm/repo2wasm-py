@@ -2,7 +2,7 @@
 
 `repo2wasm` is a clone of [`jupyter-repo2docker`] targeting [WebAssembly](https://en.wikipedia.org/wiki/WebAssembly) (Wasm) environment. If [`jupyter-repo2docker`] is a wrapper around [Docker Engine](https://docs.docker.com/engine/), `repo2wasm` is a wrapper around [JupyterLite].
 
-```{important}
+```{hint}
 Only programming languages already compiled to Wasm are supported, more details in the section "[](#supported-programming-languages)".
 ```
 

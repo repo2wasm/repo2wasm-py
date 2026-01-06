@@ -2,7 +2,46 @@
 
 # Supported configuration files
 
-## Users
+## Configuration file location
+
+The supported configuration files are searched in the following directories:
+
+- `.binder`
+- `binder`
+- `.` (root of the project)
+- `.nblink`
+
+### Root of project
+
+![status: implemented](https://img.shields.io/badge/status-implemented-green)
+![version: 0.3.0](https://img.shields.io/badge/version-0.3.0-blue)
+
+### `binder` folder
+
+![status: implemented](https://img.shields.io/badge/status-implemented-green)
+![version: 0.3.0](https://img.shields.io/badge/version-0.3.0-blue)
+
+The `binder` folder **must** be at the root of your project.
+
+### `.binder` folder
+
+![status: implemented](https://img.shields.io/badge/status-implemented-green)
+![version: 0.3.0](https://img.shields.io/badge/version-0.3.0-blue)
+
+The `.binder` folder **must** be at the root of your project.
+
+### `.nblink` folder
+
+![status: implemented](https://img.shields.io/badge/status-implemented-green)
+![version: 0.7.0](https://img.shields.io/badge/version-0.7.0-blue)
+
+The `.nblink` folder **must** be at the root of your project.
+
+```{error}
+The `.nblink` folder is not searched by `jupyter-repo2docker` used by [mybinder.org](https://mybinder.org).
+```
+
+## Configuration file for users
 
 ### `environment.yml`
 
@@ -43,7 +82,7 @@ More details in [repo2docker > User guide > install.R - Install R packages](http
 
 More details in [repo2docker > User guide > Project.toml - Install a Julia environment](https://repo2docker.readthedocs.io/en/latest/configuration/research/#project-toml-install-a-julia-environment).
 
-## Package Developers
+## Configuration file for package developers
 
 ### `Pipfile` and/or `Pipfile.lock`
 
@@ -63,7 +102,7 @@ More details in [repo2docker > User guide > setup.py - Install Python packages](
 
 More details in [repo2docker > User guide > DESCRIPTION - Install as an R package](https://repo2docker.readthedocs.io/en/latest/configuration/research/#description-install-as-an-r-package).
 
-## System-wide configuration
+## Configuration file for system-wide configuration
 
 ### `apt.txt`
 
@@ -89,7 +128,7 @@ More details in [repo2docker > User guide > default.nix - the nix package manage
 
 More details in [repo2docker > User guide > Dockerfile - Advanced environments](https://repo2docker.readthedocs.io/en/latest/configuration/system/#dockerfile-advanced-environments).
 
-## Post-build actions
+## Configuration file for post-build actions
 
 ### `postBuild`
 
