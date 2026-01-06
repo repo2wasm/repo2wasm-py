@@ -2,6 +2,10 @@
 
 ## 0.7.0
 
+### Enhancements made
+
+- Support configuration files in `.nblink`
+
 ## 0.6.0
 
 ### Enhancements made
