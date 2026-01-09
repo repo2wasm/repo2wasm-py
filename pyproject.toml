@@ -76,6 +76,7 @@ sphinx = "*"
 sphinx_rtd_theme = "*"
 sphinxcontrib-mermaid = "*"
 myst-parser = "*"
+sphinxcontrib-programoutput = "*"
 
 [tool.pixi.feature.rtd.tasks.rtd]
 description = "Build documentation as Read The Docs"
