@@ -78,6 +78,9 @@ sphinxcontrib-mermaid = "*"
 myst-parser = "*"
 sphinxcontrib-programoutput = "*"
 
+[tool.pixi.feature.rtd.pypi-dependencies]
+repo2wasm = { path = ".", editable = true }
+
 [tool.pixi.feature.rtd.tasks.rtd]
 description = "Build documentation as Read The Docs"
 cmd = "sphinx-build --builder dirhtml docs/source $READTHEDOCS_OUTPUT/html"
