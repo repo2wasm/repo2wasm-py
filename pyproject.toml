@@ -4,7 +4,7 @@ description = "Turn code repositories into Wasm based integrated development env
 keywords = ["Wasm"]
 authors = [{name = "Raniere Gaia Costa da Silva", email = "Raniere.CostadaSilva@gesis.org"}]
 maintainers = [{name = "Raniere Gaia Costa da Silva", email = "Raniere.CostadaSilva@gesis.org"}]
-dependencies = [ "jupyterlite-core>=0.7.0", "jupyterlite-xeus", "pyyaml", "jupyter_server", "jupyterlab_server", "jupyter-repo2docker>=2025.8.0"]
+dependencies = ["jupyterlite-core", "jupyterlite-xeus", "pyyaml", "jupyter-server", "jupyterlab-server", "jupyter-repo2docker"]
 requires-python = ">= 3.13"
 dynamic = ["version"]
 readme = "README.md"
@@ -49,7 +49,7 @@ cmd = "python3 -m unittest"
 cwd = "src/repo2wasm/"
 
 [tool.pixi.dependencies]
-micromamba = ">=2.3.2,<3"
+micromamba = "*"
 
 [tool.pixi.feature.release.dependencies]
 python-build = "*"
@@ -76,6 +76,10 @@ sphinx = "*"
 sphinx_rtd_theme = "*"
 sphinxcontrib-mermaid = "*"
 myst-parser = "*"
+sphinxcontrib-programoutput = "*"
+
+[tool.pixi.feature.rtd.pypi-dependencies]
+repo2wasm = { path = ".", editable = true }
 
 [tool.pixi.feature.rtd.tasks.rtd]
 description = "Build documentation as Read The Docs"
