@@ -5,7 +5,6 @@ import tempfile
 from repo2docker import contentproviders
 
 from .binder import get_buildpack
-from .buildpacks.exceptions import Repo2WasmError
 
 logger = logging.getLogger(__name__)
 
@@ -58,10 +57,8 @@ def repo2wasm(repository, ide="jupyterlab", output_dir="public", forgiving=False
     logger.info("Output directory: %s", output_dir_absolute_path)
 
     checkout_path = fetch_repository(repository)
-    try:
-        buildpack = get_buildpack(checkout_path, ide, output_dir, forgiving)
+    buildpack = get_buildpack(checkout_path, ide, output_dir, forgiving)
 
-        # doit_run will run all the necessary previous steps
-        buildpack.doit_run("post_build")
-    except Repo2WasmError as error:
-        logger.error(error)
+    # doit_run will run all the necessary previous steps
+    # doit_run capture the exception
+    return buildpack.doit_run("post_build")

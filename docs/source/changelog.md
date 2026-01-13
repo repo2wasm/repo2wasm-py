@@ -6,6 +6,10 @@
 
 - Support configuration files in `.nblink`
 
+### Bugs fixed
+
+- Only start the web server if build is successful
+
 ## 0.6.0
 
 ### Enhancements made

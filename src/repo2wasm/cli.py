@@ -97,14 +97,14 @@ def cli():
 
     logging.basicConfig(encoding="utf-8", level=selected_logging_level)
 
-    repo2wasm(
+    doit_result = repo2wasm(
         args.repository,
         ide=args.ide,
         output_dir=args.output_dir,
         forgiving=args.forgiving,
     )
 
-    if not args.no_run:
+    if doit_result == 0 and (not args.no_run):
         # Based on https://stackoverflow.com/a/60658796/1802726
 
         class Handler(http.server.SimpleHTTPRequestHandler):
