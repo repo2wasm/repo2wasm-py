@@ -1,4 +1,4 @@
-class Repo2WasmError(Exception):
+class BuildPackError(Exception):
     documentation_url = "https://repo2wasm.readthedocs.io/en/latest/common-errors/"
     error_page = ""
     long_message = ""
@@ -11,16 +11,16 @@ class Repo2WasmError(Exception):
         super().__init__(final_message, *args, **kwargs)
 
 
-class IRKernelError(Repo2WasmError):
+class IRKernelError(BuildPackError):
     error_page = "irkernel"
     long_message = "irkernel library is NOT supported. Use xeus-r instead."
 
 
-class TidyVerseError(Repo2WasmError):
+class TidyVerseError(BuildPackError):
     error_page = "tidyverse"
     long_message = "tidyverse library is NOT supported."
 
 
-class OctaveKernelError(Repo2WasmError):
+class OctaveKernelError(BuildPackError):
     error_page = "octave-kernel"
     long_message = "octave-kernel is NOT supported. Use xeus-octave instead."
