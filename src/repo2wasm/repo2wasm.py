@@ -25,16 +25,10 @@ def fetch_repository(repository):
         spec = cp.detect(repository)
         if spec is not None:
             picked_content_provider = cp
-            logger.info(
-                "Picked {cp} content provider.\n".format(cp=cp.__class__.__name__)
-            )
+            logger.info(f"Picked {cp.__class__.__name__} content provider.\n")
             break
     else:
-        RuntimeError(
-            "No matching content provider found for {repository}.".format(
-                repository=repository
-            )
-        )
+        RuntimeError(f"No matching content provider found for {repository}.")
 
     if cp.__class__.__name__ == "Local":
         checkout_path = repository
