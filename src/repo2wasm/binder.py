@@ -2,8 +2,8 @@ import logging
 import os.path
 
 from .buildpacks.conda import CondaBuildPack
-from .buildpacks.requirements import RequirementsBuildPack
 from .buildpacks.install import InstallBuildPack
+from .buildpacks.requirements import RequirementsBuildPack
 
 logger = logging.getLogger(__name__)
 
